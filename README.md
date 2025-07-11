@@ -1,0 +1,1 @@
+![Crowpunk logo](icon.png)
