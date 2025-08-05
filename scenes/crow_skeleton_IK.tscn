@@ -1,0 +1,370 @@
+[gd_scene load_steps=16 format=3 uid="uid://dpy0fqrp5r85l"]
+
+[ext_resource type="Texture2D" uid="uid://b4uj7bqnj7xuf" path="res://assets/sprites/crow_for_skeleton/wing.png" id="1_umn7a"]
+[ext_resource type="Texture2D" uid="uid://18qgk24rb8v" path="res://assets/sprites/crow_for_skeleton/pants.png" id="2_tqb20"]
+[ext_resource type="Texture2D" uid="uid://lo1510x5bovq" path="res://assets/sprites/crow_for_skeleton/leg_lower.png" id="3_ax0yo"]
+[ext_resource type="Texture2D" uid="uid://bxg6cq0caodew" path="res://assets/sprites/crow_for_skeleton/head.png" id="4_yvd37"]
+[ext_resource type="Texture2D" uid="uid://cu0ijcdt1xggg" path="res://assets/sprites/crow_for_skeleton/neck.png" id="5_juj8w"]
+[ext_resource type="Texture2D" uid="uid://bd168vrgulnjn" path="res://assets/sprites/crow_for_skeleton/body.png" id="6_dpy6g"]
+[ext_resource type="Texture2D" uid="uid://m7227jd0wu2u" path="res://assets/sprites/crow_for_skeleton/beak_upper.png" id="7_r82hp"]
+[ext_resource type="Texture2D" uid="uid://wvvfd6v0pdxg" path="res://assets/sprites/crow_for_skeleton/beak_lower.png" id="8_w80ke"]
+[ext_resource type="Texture2D" uid="uid://botccrd2snegg" path="res://assets/sprites/crow_for_skeleton/tail.png" id="9_lhubd"]
+[ext_resource type="Texture2D" uid="uid://cynagaxxrd4s5" path="res://assets/sprites/crow_for_skeleton/eye_closed2.png" id="10_md8vw"]
+[ext_resource type="Texture2D" uid="uid://86krckhur4r7" path="res://assets/sprites/crow_for_skeleton/eye_squint2.png" id="11_h6ufi"]
+[ext_resource type="Texture2D" uid="uid://5vkkmar8hqlm" path="res://assets/sprites/crow_for_skeleton/eye.png" id="12_3i7ry"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_umn7a"]
+target_nodepath = NodePath("../IK targets/clawR target")
+tip_nodepath = NodePath("root/legR/leg lowerR/clawR")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 16
+joint_data/0/bone2d_node = NodePath("root/legR")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = 83.077
+joint_data/0/constraint_angle_max = 270.769
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 17
+joint_data/1/bone2d_node = NodePath("root/legR/leg lowerR")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 58.463
+joint_data/1/constraint_angle_max = -49.23
+joint_data/1/constraint_angle_invert = true
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_tqb20"]
+target_nodepath = NodePath("../IK targets/clawL target")
+tip_nodepath = NodePath("root/legL/leg lowerL/clawL")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 13
+joint_data/0/bone2d_node = NodePath("root/legL")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = 68.108
+joint_data/0/constraint_angle_max = 275.676
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 14
+joint_data/1/bone2d_node = NodePath("root/legL/leg lowerL")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 51.892
+joint_data/1/constraint_angle_max = 304.865
+joint_data/1/constraint_angle_invert = true
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_tqb20"]
+enabled = true
+modification_count = 2
+modifications/0 = SubResource("SkeletonModification2DCCDIK_umn7a")
+modifications/1 = SubResource("SkeletonModification2DCCDIK_tqb20")
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Rig" type="Node2D" parent="."]
+
+[node name="Polygons" type="Node2D" parent="Rig"]
+
+[node name="wingL" type="Polygon2D" parent="Rig/Polygons"]
+z_index = -2
+texture = ExtResource("1_umn7a")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(43.0699, -40.794, 52.7704, -41.3221, 56.0358, -36.9521, 54.0189, -28.2602, 38.5558, -18.3675, 16.6097, -16.9749, 24.3893, -26.8674, 45.318, -22.5248, 32.5989, -32.9176)
+uv = PackedVector2Array(45.6808, 47.0698, 55.9349, 46.5114, 59.3868, 51.1308, 57.2548, 60.3188, 40.9091, 70.776, 17.7105, 72.2481, 25.9341, 61.791, 48.3397, 66.0266, 34.7201, 55.1723)
+polygons = [PackedInt32Array(6, 5, 4), PackedInt32Array(6, 8, 4), PackedInt32Array(8, 7, 4), PackedInt32Array(8, 0, 7), PackedInt32Array(7, 3, 0), PackedInt32Array(3, 1, 0), PackedInt32Array(3, 2, 1)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(1, 1, 1, 1, 0, 0, 0, 0.5, 0.5), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 1, 1, 1, 0.5, 0.5), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 2
+
+[node name="pantsL" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("2_tqb20")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(37.7545, -24.1483, 41.4351, -11.9284, 45.7538, -11.7813, 51.2503, -24.1973)
+uv = PackedVector2Array(37.5027, 66.0996, 41.3099, 78.7395, 45.777, 78.8918, 51.4624, 66.0488)
+polygons = [PackedInt32Array(2, 0, 3), PackedInt32Array(1, 2, 0)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(1, 0.5, 0.5, 1), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="pantsR" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("2_tqb20")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(30.006, -20.7494, 33.8132, -8.1095, 38.2804, -7.95722, 43.9658, -20.8002)
+uv = PackedVector2Array(37.5027, 66.0996, 41.3099, 78.7395, 45.777, 78.8918, 51.4624, 66.0488)
+polygons = [PackedInt32Array(2, 0, 3), PackedInt32Array(2, 1, 0)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(1, 0.5, 0.5, 1), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="legL" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("3_ax0yo")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(46.477, -7.10189, 39.8987, -14.1417, 45.0482, -14.4559, 52.201, -7.4956, 57.2618, -7.80431, 57.4529, -3.93943, 42.9446, -2.92075, 42.7952, -6.83273)
+uv = PackedVector2Array(46.1309, 83.3695, 39.7624, 75.6627, 45.1156, 75.6627, 52.0839, 83.3233, 57.3448, 83.3233, 57.2987, 87.3382, 42.2083, 87.4766, 42.3006, 83.4156)
+polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(0, 3, 2), PackedInt32Array(7, 6, 0), PackedInt32Array(6, 5, 0), PackedInt32Array(0, 3, 5), PackedInt32Array(3, 4, 5)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0.5, 0, 0, 0.5, 1, 1, 1, 1), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="legR" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("3_ax0yo")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(38.6508, -3.08069, 32.3162, -10.8152, 37.6693, -10.7917, 44.6041, -3.10075, 49.8649, -3.07769, 49.8012, 0.936944, 34.7103, 1.00925, 34.8204, -3.05132)
+uv = PackedVector2Array(46.1309, 83.3695, 39.7624, 75.6627, 45.1156, 75.6627, 52.0839, 83.3233, 57.3448, 83.3233, 57.2987, 87.3382, 42.2083, 87.4766, 42.3006, 83.4156)
+polygons = [PackedInt32Array(1, 2, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(0, 6, 7), PackedInt32Array(6, 5, 0), PackedInt32Array(0, 3, 5), PackedInt32Array(3, 4, 5)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0.5, 0, 0, 0.5, 1, 1, 1, 1)]
+
+[node name="head" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("4_yvd37")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(46.6235, -46.8684, 52.234, -53.2984, 58.3173, -53.2984, 61.5008, -48.9802, 61.5323, -44.7566, 58.4749, -41.1003, 54.2828, -41.1003)
+uv = PackedVector2Array(52.7232, 39.1238, 58.3337, 32.6938, 64.4171, 32.6938, 67.6005, 37.012, 67.6321, 41.2356, 64.5746, 44.8919, 60.3825, 44.8919)
+polygons = [PackedInt32Array(0, 1, 6), PackedInt32Array(6, 5, 4), PackedInt32Array(4, 3, 6), PackedInt32Array(2, 6, 3), PackedInt32Array(1, 2, 6)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)]
+
+[node name="neck" type="Polygon2D" parent="Rig/Polygons"]
+z_index = -1
+texture = ExtResource("5_juj8w")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(42.6945, -39.3345, 48.5553, -49.8101, 58.754, -45.426, 56.2159, -29.2742)
+uv = PackedVector2Array(48.8229, 46.8672, 54.6837, 36.3916, 64.8824, 40.7756, 62.3442, 56.9274)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(0, 3, 2)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(1, 1, 1, 1), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="torso" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("6_dpy6g")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(26.9927, -21.119, 32.9319, -15.5858, 44.6074, -16.6518, 55.8767, -24.2662, 58.2118, -30.7131, 57.7042, -37.7691, 44.4043, -41.018, 26.4343, -28.7334)
+uv = PackedVector2Array(31.8698, 66.2452, 37.8091, 71.7783, 49.4845, 70.7123, 60.7538, 63.0979, 63.0889, 56.651, 62.5813, 49.595, 49.2814, 46.3462, 31.3114, 58.6308)
+polygons = [PackedInt32Array(7, 0, 1), PackedInt32Array(1, 2, 7), PackedInt32Array(7, 6, 2), PackedInt32Array(6, 3, 2), PackedInt32Array(3, 4, 6), PackedInt32Array(4, 5, 6)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(1, 1, 1, 0.5, 0.5, 0.5, 1, 1), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0.5, 0.5, 0.5, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="beakU" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("7_r82hp")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(57.5641, -52.2757, 57.5641, -46.4435, 65.8623, -44.3493, 68.387, -44.3493, 68.3675, -47.4612)
+uv = PackedVector2Array(63.6602, 33.7538, 63.6602, 39.586, 71.9584, 41.6801, 74.4831, 41.6801, 74.4636, 38.5683)
+polygons = [PackedInt32Array(0, 1, 4), PackedInt32Array(1, 2, 4), PackedInt32Array(2, 3, 4)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(1, 1, 1, 1, 1), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0)]
+
+[node name="beakL" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("8_w80ke")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(57.496, -42.3979, 68.6444, -44.2158, 68.6444, -47.7716, 57.3356, -47.7849)
+uv = PackedVector2Array(63.5498, 43.6531, 74.6982, 41.8351, 74.6982, 38.2794, 63.3894, 38.266)
+polygons = [PackedInt32Array(3, 0, 2), PackedInt32Array(0, 1, 2)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(1, 1, 1, 1), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="tail" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("9_lhubd")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(7.93819, -13.7323, 13.907, -7.16585, 25.7931, -14.2766, 36.4889, -16.9764, 27.898, -27.6237, 19.8582, -21.0925)
+uv = PackedVector2Array(40.9355, 58.4599, 47.7318, 64.1655, 58.5556, 55.5232, 68.7921, 51.4118, 58.8493, 42.0144, 51.7593, 49.5659)
+polygons = [PackedInt32Array(0, 5, 1), PackedInt32Array(1, 2, 5), PackedInt32Array(2, 4, 5), PackedInt32Array(2, 3, 4)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(1, 1, 1, 1, 1, 1), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0, 0)]
+
+[node name="wingR" type="Polygon2D" parent="Rig/Polygons"]
+texture = ExtResource("1_umn7a")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(40.4669, -39.1292, 50.721, -39.6876, 54.1728, -35.0682, 52.0408, -25.8801, 35.6952, -15.423, 12.4966, -13.9509, 20.7202, -24.408, 41.6468, -19.0315, 28.6628, -30.2449)
+uv = PackedVector2Array(45.6808, 47.0698, 55.9349, 46.5114, 59.3868, 51.1308, 57.2548, 60.3188, 40.9091, 70.776, 17.7105, 72.2481, 25.9341, 61.791, 47.9434, 66.4101, 34.6099, 55.3238)
+polygons = [PackedInt32Array(5, 6, 4), PackedInt32Array(6, 8, 4), PackedInt32Array(4, 7, 8), PackedInt32Array(7, 0, 8), PackedInt32Array(7, 3, 0), PackedInt32Array(0, 1, 3), PackedInt32Array(1, 2, 3)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(1, 1, 1, 1, 0, 0, 0, 0.5, 0.5), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0, 1, 1, 1, 0.5, 0.5), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 2
+
+[node name="eye closed wrapper" type="Node" parent="Rig/Polygons"]
+
+[node name="eye closed" type="Polygon2D" parent="Rig/Polygons/eye closed wrapper"]
+texture = ExtResource("10_md8vw")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(55.1613, -50.7771, 59.2687, -50.7528, 59.2687, -46.4266, 54.9304, -46.4266)
+uv = PackedVector2Array(60.4801, 35.3989, 64.5875, 35.4232, 64.5875, 39.7493, 60.2492, 39.7493)
+polygons = [PackedInt32Array(3, 0, 1), PackedInt32Array(3, 2, 1)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(1, 1, 1, 1), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="eye squint wrapper" type="Node" parent="Rig/Polygons"]
+
+[node name="eye squint" type="Polygon2D" parent="Rig/Polygons/eye squint wrapper"]
+visible = false
+texture = ExtResource("11_h6ufi")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(54.8185, -50.7666, 54.8185, -46.4945, 59.325, -46.4684, 59.325, -51.0271)
+uv = PackedVector2Array(60.1471, 35.3687, 60.1471, 39.6408, 64.6536, 39.6668, 64.6536, 35.1082)
+polygons = [PackedInt32Array(0, 1, 3), PackedInt32Array(1, 2, 3)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(1, 1, 1, 1), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="eye open wrapper" type="Node" parent="Rig/Polygons"]
+
+[node name="eye open" type="Polygon2D" parent="Rig/Polygons/eye open wrapper"]
+texture = ExtResource("12_3i7ry")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(54.8525, -50.9317, 59.4108, -50.917, 59.3814, -46.3293, 54.9848, -46.3293)
+uv = PackedVector2Array(60.1805, 35.1972, 64.7388, 35.2119, 64.7094, 39.7996, 60.3128, 39.7996)
+polygons = [PackedInt32Array(0, 3, 1), PackedInt32Array(3, 2, 1)]
+bones = ["root", PackedFloat32Array(0, 0, 0, 0), "root/torso", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/eye", PackedFloat32Array(1, 1, 1, 1), "root/torso/neck/head/beakU", PackedFloat32Array(0, 0, 0, 0), "root/torso/neck/head/beakL", PackedFloat32Array(0, 0, 0, 0), "root/torso/chest", PackedFloat32Array(0, 0, 0, 0), "root/torso/tail", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingR/wing lowerR", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL", PackedFloat32Array(0, 0, 0, 0), "root/torso/wingL/wing lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL", PackedFloat32Array(0, 0, 0, 0), "root/legL/leg lowerL/clawL", PackedFloat32Array(0, 0, 0, 0), "root/legR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR", PackedFloat32Array(0, 0, 0, 0), "root/legR/leg lowerR/clawR", PackedFloat32Array(0, 0, 0, 0)]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Rig"]
+modification_stack = SubResource("SkeletonModificationStack2D_tqb20")
+
+[node name="root" type="Bone2D" parent="Rig/Skeleton2D"]
+position = Vector2(41, -22)
+rest = Transform2D(1, 0, 0, 1, 41, -22)
+auto_calculate_length_and_angle = false
+length = 4.0
+bone_angle = 0.0
+editor_settings/show_bone_gizmo = false
+
+[node name="torso" type="Bone2D" parent="Rig/Skeleton2D/root"]
+position = Vector2(3, -11)
+rest = Transform2D(1, 0, 0, 1, 3, -11)
+auto_calculate_length_and_angle = false
+length = 8.0
+bone_angle = -35.801
+editor_settings/show_bone_gizmo = false
+
+[node name="neck" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
+position = Vector2(6, -4)
+rest = Transform2D(1, 0, 0, 1, 6, -4)
+auto_calculate_length_and_angle = false
+length = 7.0
+bone_angle = -80.0
+editor_settings/show_bone_gizmo = false
+
+[node name="head" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck"]
+position = Vector2(1, -6)
+rest = Transform2D(1, 0, 0, 1, 1, -6)
+auto_calculate_length_and_angle = false
+length = 5.0
+bone_angle = -65.635
+editor_settings/show_bone_gizmo = false
+
+[node name="eye" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck/head"]
+position = Vector2(5, -6)
+rest = Transform2D(1, 0, 0, 1, 5, -6)
+auto_calculate_length_and_angle = false
+length = 2.0
+bone_angle = 0.0
+editor_settings/show_bone_gizmo = false
+
+[node name="beakU" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck/head"]
+position = Vector2(6, -3)
+rest = Transform2D(1, 0, 0, 1, 6, -3)
+auto_calculate_length_and_angle = false
+length = 10.0
+bone_angle = -4.0
+editor_settings/show_bone_gizmo = false
+
+[node name="beakL" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck/head"]
+position = Vector2(6, -3)
+rest = Transform2D(1, 0, 0, 1, 6, -3)
+auto_calculate_length_and_angle = false
+length = 10.0
+bone_angle = 4.0
+editor_settings/show_bone_gizmo = false
+
+[node name="chest" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
+position = Vector2(3, -2)
+rest = Transform2D(1, 0, 0, 1, 3, -2)
+auto_calculate_length_and_angle = false
+length = 9.0
+bone_angle = 14.0
+editor_settings/show_bone_gizmo = false
+
+[node name="tail" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
+position = Vector2(-16, 10)
+rest = Transform2D(1, 0, 0, 1, -16, 10)
+auto_calculate_length_and_angle = false
+length = 18.0
+bone_angle = 145.193
+editor_settings/show_bone_gizmo = false
+
+[node name="wingR" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
+position = Vector2(4, -1)
+rest = Transform2D(1, 0, 0, 1, 4, -1)
+auto_calculate_length_and_angle = false
+length = 14.0
+bone_angle = 150.0
+editor_settings/show_bone_gizmo = false
+
+[node name="wing lowerR" type="Bone2D" parent="Rig/Skeleton2D/root/torso/wingR"]
+position = Vector2(-12, 7)
+rest = Transform2D(1, 0, 0, 1, -12, 7)
+auto_calculate_length_and_angle = false
+length = 19.0
+bone_angle = 150.0
+editor_settings/show_bone_gizmo = false
+
+[node name="wingL" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
+position = Vector2(6, -3)
+rest = Transform2D(1, 0, 0, 1, 6, -3)
+auto_calculate_length_and_angle = false
+length = 14.0
+bone_angle = 150.0
+editor_settings/show_bone_gizmo = false
+
+[node name="wing lowerL" type="Bone2D" parent="Rig/Skeleton2D/root/torso/wingL"]
+position = Vector2(-12, 7)
+rest = Transform2D(1, 0, 0, 1, -12, 7)
+auto_calculate_length_and_angle = false
+length = 19.0
+bone_angle = 150.0
+editor_settings/show_bone_gizmo = false
+
+[node name="legL" type="Bone2D" parent="Rig/Skeleton2D/root"]
+position = Vector2(3, 0)
+rest = Transform2D(1, 0, 0, 1, 3, 0)
+auto_calculate_length_and_angle = false
+length = 9.0
+bone_angle = 96.0
+editor_settings/show_bone_gizmo = false
+metadata/_local_pose_override_enabled_ = true
+
+[node name="leg lowerL" type="Bone2D" parent="Rig/Skeleton2D/root/legL"]
+position = Vector2(-1, 9)
+rest = Transform2D(1, 0, 0, 1, -1, 9)
+auto_calculate_length_and_angle = false
+length = 10.0
+bone_angle = 44.0
+editor_settings/show_bone_gizmo = false
+metadata/_local_pose_override_enabled_ = true
+
+[node name="clawL" type="Bone2D" parent="Rig/Skeleton2D/root/legL/leg lowerL"]
+position = Vector2(7, 6)
+rest = Transform2D(1, 0, 0, 1, 7, 6)
+auto_calculate_length_and_angle = false
+length = 2.0
+bone_angle = 90.0
+editor_settings/show_bone_gizmo = false
+
+[node name="legR" type="Bone2D" parent="Rig/Skeleton2D/root"]
+position = Vector2(-5, 4)
+rest = Transform2D(1, 0, 0, 1, -5, 4)
+auto_calculate_length_and_angle = false
+length = 9.0
+bone_angle = 93.0
+editor_settings/show_bone_gizmo = false
+metadata/_local_pose_override_enabled_ = true
+
+[node name="leg lowerR" type="Bone2D" parent="Rig/Skeleton2D/root/legR"]
+position = Vector2(-1, 9)
+rest = Transform2D(1, 0, 0, 1, -1, 9)
+auto_calculate_length_and_angle = false
+length = 10.0
+bone_angle = 44.0
+editor_settings/show_bone_gizmo = false
+metadata/_local_pose_override_enabled_ = true
+
+[node name="clawR" type="Bone2D" parent="Rig/Skeleton2D/root/legR/leg lowerR"]
+position = Vector2(7, 7)
+rest = Transform2D(1, 0, 0, 1, 7, 7)
+auto_calculate_length_and_angle = false
+length = 2.0
+bone_angle = 90.0
+editor_settings/show_bone_gizmo = false
+
+[node name="IK targets" type="Node2D" parent="Rig"]
+
+[node name="clawL target" type="Node2D" parent="Rig/IK targets"]
+position = Vector2(50, -7)
+
+[node name="clawR target" type="Node2D" parent="Rig/IK targets"]
+position = Vector2(42, -2)
