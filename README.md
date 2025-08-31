@@ -1,5 +1,3 @@
-![Crowpunk logo](logo.png)
-
 # Punk Crow
 
 **Punk Crow** is a character-driven 2D game in development, inspired by the social intelligence and mischievous behavior of crows. You play as a clever crow navigating a playful world - collecting shiny objects, tricking other animals, exploring the territory, and avoidung the enemies.
