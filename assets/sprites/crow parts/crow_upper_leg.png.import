@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c74faf4nx86l0"
-path="res://.godot/imported/crow_upper_leg.png-9718f42bbf714d3a0e3ce3a7669053f1.ctex"
+path="res://.godot/imported/crow_upper_leg.png-c3edd1ee99634ebff4c571456c7519d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/crow parts/crow_upper_leg.png"
-dest_files=["res://.godot/imported/crow_upper_leg.png-9718f42bbf714d3a0e3ce3a7669053f1.ctex"]
+source_file="res://Assets/Sprites/crow parts/crow_upper_leg.png"
+dest_files=["res://.godot/imported/crow_upper_leg.png-c3edd1ee99634ebff4c571456c7519d4.ctex"]
 
 [params]
 

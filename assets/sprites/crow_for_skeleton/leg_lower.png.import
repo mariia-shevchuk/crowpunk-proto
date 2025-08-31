@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lo1510x5bovq"
-path="res://.godot/imported/leg_lower.png-42d1d9a3705417196b752bc6a02bea4d.ctex"
+path="res://.godot/imported/leg_lower.png-370e9e57255689751472cc8893836aff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/crow_for_skeleton/leg_lower.png"
-dest_files=["res://.godot/imported/leg_lower.png-42d1d9a3705417196b752bc6a02bea4d.ctex"]
+source_file="res://Assets/Sprites/crow_for_skeleton/leg_lower.png"
+dest_files=["res://.godot/imported/leg_lower.png-370e9e57255689751472cc8893836aff.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcg3x3aajoqic"
-path="res://.godot/imported/placeholder_crow.png-be03582de873096b6b0a0d7ee51edfaf.ctex"
+uid="uid://dks2bmqnqot0q"
+path="res://.godot/imported/1.png-ff99237558964decba7fbe5b2550bfea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_dwnld/Sprites/placeholder_crow.png"
-dest_files=["res://.godot/imported/placeholder_crow.png-be03582de873096b6b0a0d7ee51edfaf.ctex"]
+source_file="res://Assets/Sprites/simple_natural_landscape_pixel_art_background/1.png"
+dest_files=["res://.godot/imported/1.png-ff99237558964decba7fbe5b2550bfea.ctex"]
 
 [params]
 

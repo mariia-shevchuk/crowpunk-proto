@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://usu27lcicyh"
-path="res://.godot/imported/crow_feather2.png-6e183756fbeb76dc2fc221ff2bb62a12.ctex"
+path="res://.godot/imported/crow_feather2.png-7017397f9c81cf5420081a5e6a2cf45e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/crow parts/crow_feather2.png"
-dest_files=["res://.godot/imported/crow_feather2.png-6e183756fbeb76dc2fc221ff2bb62a12.ctex"]
+source_file="res://Assets/Sprites/crow parts/crow_feather2.png"
+dest_files=["res://.godot/imported/crow_feather2.png-7017397f9c81cf5420081a5e6a2cf45e.ctex"]
 
 [params]
 

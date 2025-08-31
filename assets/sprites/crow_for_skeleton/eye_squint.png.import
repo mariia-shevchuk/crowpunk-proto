@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b526wnkaedyqe"
-path="res://.godot/imported/eye_squint.png-901984d5162a45500827ddf4ebe9bbaf.ctex"
+path="res://.godot/imported/eye_squint.png-53a342d4e8f7d97b35902ea5e1b6fc74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/crow_for_skeleton/eye_squint.png"
-dest_files=["res://.godot/imported/eye_squint.png-901984d5162a45500827ddf4ebe9bbaf.ctex"]
+source_file="res://Assets/Sprites/crow_for_skeleton/eye_squint.png"
+dest_files=["res://.godot/imported/eye_squint.png-53a342d4e8f7d97b35902ea5e1b6fc74.ctex"]
 
 [params]
 

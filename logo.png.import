@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://odf1asiihs86"
-path="res://.godot/imported/orig.png-5405b277b160f62d5d0a6efe2790817f.ctex"
+uid="uid://bjgjpuccucg2t"
+path="res://.godot/imported/logo.png-cca8726399059c8d4f806e28e356b14d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_dwnld/BG/simple_natural_landscape_pixel_art_background/orig.png"
-dest_files=["res://.godot/imported/orig.png-5405b277b160f62d5d0a6efe2790817f.ctex"]
+source_file="res://logo.png"
+dest_files=["res://.godot/imported/logo.png-cca8726399059c8d4f806e28e356b14d.ctex"]
 
 [params]
 

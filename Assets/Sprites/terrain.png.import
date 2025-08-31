@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dks2bmqnqot0q"
-path="res://.godot/imported/1.png-2e39de7edc21aaed666f10eced6bac8c.ctex"
+uid="uid://24d0xvgg3tjn"
+path="res://.godot/imported/terrain.png-262a93481fe4d2aba4889a2b4c473899.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_dwnld/BG/simple_natural_landscape_pixel_art_background/1.png"
-dest_files=["res://.godot/imported/1.png-2e39de7edc21aaed666f10eced6bac8c.ctex"]
+source_file="res://Assets/Sprites/terrain.png"
+dest_files=["res://.godot/imported/terrain.png-262a93481fe4d2aba4889a2b4c473899.ctex"]
 
 [params]
 

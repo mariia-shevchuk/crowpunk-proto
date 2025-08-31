@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cynagaxxrd4s5"
-path="res://.godot/imported/eye_closed2.png-f7e7666e033d3ece9489546bcc150c22.ctex"
+path="res://.godot/imported/eye_closed2.png-6c1ae468153a7feaca231ace1a72378f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/crow_for_skeleton/eye_closed2.png"
-dest_files=["res://.godot/imported/eye_closed2.png-f7e7666e033d3ece9489546bcc150c22.ctex"]
+source_file="res://Assets/Sprites/crow_for_skeleton/eye_closed2.png"
+dest_files=["res://.godot/imported/eye_closed2.png-6c1ae468153a7feaca231ace1a72378f.ctex"]
 
 [params]
 

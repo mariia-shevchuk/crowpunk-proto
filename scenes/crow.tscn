@@ -1,18 +1,18 @@
-[gd_scene load_steps=26 format=3 uid="uid://b5obvqg06pvw1"]
+[gd_scene load_steps=29 format=3 uid="uid://b5obvqg06pvw1"]
 
-[ext_resource type="Script" uid="uid://cw8e57l3elrbm" path="res://scripts/crow_2.gd" id="1_g7n2h"]
-[ext_resource type="Texture2D" uid="uid://b4uj7bqnj7xuf" path="res://assets/sprites/crow_for_skeleton/wing.png" id="2_6sy47"]
-[ext_resource type="Texture2D" uid="uid://18qgk24rb8v" path="res://assets/sprites/crow_for_skeleton/pants.png" id="3_inutj"]
-[ext_resource type="Texture2D" uid="uid://lo1510x5bovq" path="res://assets/sprites/crow_for_skeleton/leg_lower.png" id="4_37fjj"]
-[ext_resource type="Texture2D" uid="uid://bxg6cq0caodew" path="res://assets/sprites/crow_for_skeleton/head.png" id="5_a7pcj"]
-[ext_resource type="Texture2D" uid="uid://cu0ijcdt1xggg" path="res://assets/sprites/crow_for_skeleton/neck.png" id="6_h6p6l"]
-[ext_resource type="Texture2D" uid="uid://bd168vrgulnjn" path="res://assets/sprites/crow_for_skeleton/body.png" id="7_w186o"]
-[ext_resource type="Texture2D" uid="uid://m7227jd0wu2u" path="res://assets/sprites/crow_for_skeleton/beak_upper.png" id="8_ggh7m"]
-[ext_resource type="Texture2D" uid="uid://wvvfd6v0pdxg" path="res://assets/sprites/crow_for_skeleton/beak_lower.png" id="9_n25me"]
-[ext_resource type="Texture2D" uid="uid://botccrd2snegg" path="res://assets/sprites/crow_for_skeleton/tail.png" id="10_i0rgd"]
-[ext_resource type="Texture2D" uid="uid://cynagaxxrd4s5" path="res://assets/sprites/crow_for_skeleton/eye_closed2.png" id="11_pqlgw"]
-[ext_resource type="Texture2D" uid="uid://86krckhur4r7" path="res://assets/sprites/crow_for_skeleton/eye_squint2.png" id="12_0s2rn"]
-[ext_resource type="Texture2D" uid="uid://5vkkmar8hqlm" path="res://assets/sprites/crow_for_skeleton/eye.png" id="13_jopto"]
+[ext_resource type="Script" uid="uid://cw8e57l3elrbm" path="res://Scripts/crow_2.gd" id="1_g7n2h"]
+[ext_resource type="Texture2D" uid="uid://b4uj7bqnj7xuf" path="res://Assets/Sprites/crow_for_skeleton/wing.png" id="2_6sy47"]
+[ext_resource type="Texture2D" uid="uid://18qgk24rb8v" path="res://Assets/Sprites/crow_for_skeleton/pants.png" id="3_inutj"]
+[ext_resource type="Texture2D" uid="uid://lo1510x5bovq" path="res://Assets/Sprites/crow_for_skeleton/leg_lower.png" id="4_37fjj"]
+[ext_resource type="Texture2D" uid="uid://bxg6cq0caodew" path="res://Assets/Sprites/crow_for_skeleton/head.png" id="5_a7pcj"]
+[ext_resource type="Texture2D" uid="uid://cu0ijcdt1xggg" path="res://Assets/Sprites/crow_for_skeleton/neck.png" id="6_h6p6l"]
+[ext_resource type="Texture2D" uid="uid://bd168vrgulnjn" path="res://Assets/Sprites/crow_for_skeleton/body.png" id="7_w186o"]
+[ext_resource type="Texture2D" uid="uid://m7227jd0wu2u" path="res://Assets/Sprites/crow_for_skeleton/beak_upper.png" id="8_ggh7m"]
+[ext_resource type="Texture2D" uid="uid://wvvfd6v0pdxg" path="res://Assets/Sprites/crow_for_skeleton/beak_lower.png" id="9_n25me"]
+[ext_resource type="Texture2D" uid="uid://botccrd2snegg" path="res://Assets/Sprites/crow_for_skeleton/tail.png" id="10_i0rgd"]
+[ext_resource type="Texture2D" uid="uid://cynagaxxrd4s5" path="res://Assets/Sprites/crow_for_skeleton/eye_closed2.png" id="11_pqlgw"]
+[ext_resource type="Texture2D" uid="uid://86krckhur4r7" path="res://Assets/Sprites/crow_for_skeleton/eye_squint2.png" id="12_0s2rn"]
+[ext_resource type="Texture2D" uid="uid://5vkkmar8hqlm" path="res://Assets/Sprites/crow_for_skeleton/eye.png" id="13_jopto"]
 
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_umn7a"]
 target_nodepath = NodePath("../IK targets/clawR target")
@@ -67,7 +67,7 @@ modifications/0 = SubResource("SkeletonModification2DCCDIK_umn7a")
 modifications/1 = SubResource("SkeletonModification2DCCDIK_tqb20")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6om6b"]
-radius = 17.0294
+radius = 21.095
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lhyj"]
 size = Vector2(20.2488, 20.1762)
@@ -1026,11 +1026,25 @@ tracks/10/keys = {
 "values": [true, false, false, false, true]
 }
 
+[sub_resource type="Animation" id="Animation_iol4p"]
+resource_name = "hop"
+
+[sub_resource type="Animation" id="Animation_dy20s"]
+resource_name = "flap"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_6lehy"]
+resource_name = "dive"
+step = 0.1
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rp2jd"]
 _data = {
 &"RESET": SubResource("Animation_rp2jd"),
 &"blink": SubResource("Animation_jmodd"),
 &"breathe": SubResource("Animation_x3t5p"),
+&"dive": SubResource("Animation_6lehy"),
+&"flap": SubResource("Animation_dy20s"),
+&"hop": SubResource("Animation_iol4p"),
 &"idle": SubResource("Animation_663cs"),
 &"walk": SubResource("Animation_m4cgr"),
 &"yawn": SubResource("Animation_h7gam")
@@ -1190,6 +1204,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="torso" type="Bone2D" parent="Rig/Skeleton2D/root"]
 position = Vector2(3, -11)
+scale = Vector2(0.999819, 0.999819)
 rest = Transform2D(1, 0, 0, 1, 3, -11)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -1198,7 +1213,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="neck" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
 position = Vector2(6, -4)
-scale = Vector2(0.999996, 0.999996)
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, 6, -4)
 auto_calculate_length_and_angle = false
 length = 7.0
@@ -1207,7 +1222,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="head" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck"]
 position = Vector2(1, -6)
-scale = Vector2(0.99998, 0.99998)
+scale = Vector2(0.999952, 0.999952)
 rest = Transform2D(1, 0, 0, 1, 1, -6)
 auto_calculate_length_and_angle = false
 length = 5.0
@@ -1224,7 +1239,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="beakU" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck/head"]
 position = Vector2(6, -3)
-scale = Vector2(0.999996, 0.999996)
+scale = Vector2(0.999981, 0.999981)
 rest = Transform2D(1, 0, 0, 1, 6, -3)
 auto_calculate_length_and_angle = false
 length = 10.0
@@ -1233,7 +1248,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="beakL" type="Bone2D" parent="Rig/Skeleton2D/root/torso/neck/head"]
 position = Vector2(6, -3)
-scale = Vector2(0.999996, 0.999996)
+scale = Vector2(0.999981, 0.999981)
 rest = Transform2D(1, 0, 0, 1, 6, -3)
 auto_calculate_length_and_angle = false
 length = 10.0
@@ -1250,7 +1265,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="tail" type="Bone2D" parent="Rig/Skeleton2D/root/torso"]
 position = Vector2(-16, 10)
-scale = Vector2(0.99998, 0.99998)
+scale = Vector2(0.999949, 0.999949)
 rest = Transform2D(1, 0, 0, 1, -16, 10)
 auto_calculate_length_and_angle = false
 length = 18.0
@@ -1293,6 +1308,7 @@ editor_settings/show_bone_gizmo = false
 [node name="legL" type="Bone2D" parent="Rig/Skeleton2D/root"]
 modulate = Color(0.0727198, 0.0727198, 0.0727198, 0.244509)
 position = Vector2(3, 0)
+scale = Vector2(0.99985, 0.99985)
 rest = Transform2D(1, 0, 0, 1, 3, 0)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -1301,6 +1317,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="leg lowerL" type="Bone2D" parent="Rig/Skeleton2D/root/legL"]
 position = Vector2(-0.999992, 9)
+scale = Vector2(0.999855, 0.999855)
 rest = Transform2D(1, 0, 0, 1, -1, 9)
 auto_calculate_length_and_angle = false
 length = 10.0
@@ -1309,6 +1326,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="clawL" type="Bone2D" parent="Rig/Skeleton2D/root/legL/leg lowerL"]
 position = Vector2(7, 6)
+scale = Vector2(0.999848, 0.999848)
 rest = Transform2D(1, 0, 0, 1, 7, 6)
 auto_calculate_length_and_angle = false
 length = 2.0
@@ -1317,6 +1335,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="legR" type="Bone2D" parent="Rig/Skeleton2D/root"]
 position = Vector2(-5, 4)
+scale = Vector2(0.999848, 0.999848)
 rest = Transform2D(1, 0, 0, 1, -5, 4)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -1325,6 +1344,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="leg lowerR" type="Bone2D" parent="Rig/Skeleton2D/root/legR"]
 position = Vector2(-0.999577, 9.00105)
+scale = Vector2(0.999857, 0.999857)
 rest = Transform2D(1, 0, 0, 1, -1, 9)
 auto_calculate_length_and_angle = false
 length = 10.0
@@ -1333,6 +1353,7 @@ editor_settings/show_bone_gizmo = false
 
 [node name="clawR" type="Bone2D" parent="Rig/Skeleton2D/root/legR/leg lowerR"]
 position = Vector2(7, 7)
+scale = Vector2(0.999861, 0.999861)
 rest = Transform2D(1, 0, 0, 1, 7, 7)
 auto_calculate_length_and_angle = false
 length = 2.0

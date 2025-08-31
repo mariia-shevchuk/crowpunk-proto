@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwkg8kqfqhdn4"
-path="res://.godot/imported/crow_upper_beak.png-a9bd5230780406829cdf29cfaab7e936.ctex"
+path="res://.godot/imported/crow_upper_beak.png-ea361345aa1bc66c18ad51970d1ba10e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/crow parts/crow_upper_beak.png"
-dest_files=["res://.godot/imported/crow_upper_beak.png-a9bd5230780406829cdf29cfaab7e936.ctex"]
+source_file="res://Assets/Sprites/crow parts/crow_upper_beak.png"
+dest_files=["res://.godot/imported/crow_upper_beak.png-ea361345aa1bc66c18ad51970d1ba10e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c46sqqrepjjkx"
-path="res://.godot/imported/forest-2.png-6882e0bf9d261fd73da9e41ca2bd4698.ctex"
+uid="uid://cq6illuantkob"
+path="res://.godot/imported/COUPON.png-d98241d94a1ce6757ca49d4cb4fa5d8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_dwnld/Sprites/forest-2.png"
-dest_files=["res://.godot/imported/forest-2.png-6882e0bf9d261fd73da9e41ca2bd4698.ctex"]
+source_file="res://Assets/Sprites/simple_natural_landscape_pixel_art_background/COUPON.png"
+dest_files=["res://.godot/imported/COUPON.png-d98241d94a1ce6757ca49d4cb4fa5d8e.ctex"]
 
 [params]
 

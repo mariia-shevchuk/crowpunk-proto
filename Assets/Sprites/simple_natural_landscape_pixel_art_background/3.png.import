@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl5dchb6snqcl"
-path="res://.godot/imported/coin.png-d32427747e4d875bff41598db328ff9d.ctex"
+uid="uid://bhng26y6eq33e"
+path="res://.godot/imported/3.png-f5e968f8960a5c17b0829f91fa433512.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_dwnld/Sprites/coin.png"
-dest_files=["res://.godot/imported/coin.png-d32427747e4d875bff41598db328ff9d.ctex"]
+source_file="res://Assets/Sprites/simple_natural_landscape_pixel_art_background/3.png"
+dest_files=["res://.godot/imported/3.png-f5e968f8960a5c17b0829f91fa433512.ctex"]
 
 [params]
 
