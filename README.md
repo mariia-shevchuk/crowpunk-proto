@@ -27,14 +27,19 @@ Watch the crow’s walk cycle with attitude:
 - **Engine**: Godot 4.4 
 - **Languages**: GDScript  
 - **Animation**: Godot Skeleton2D + IK  
-- **Art**: Hand-drawn placeholders
 
 ---
 
 ## Next Steps
 
+Immediate:
 - Polish movement feel & responsiveness  
-- Add flapping, diving and hopping animations  
+- Add flapping, diving and hopping animations
+Near future:
+- Prototype shiny-object interactions
+- Test first environmental scene
+- Implement basic crow-to-crow NPC logic
+- Add collectible system (
 
 
 
